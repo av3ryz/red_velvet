@@ -1,2 +1,9 @@
-<h1>Albums#show</h1>
+<h1><%= @album['title'] %></h1>
+<h2>Songs in this Album:</h2>
+<ul>
+    <% @songs.each do |song| %>
+        <li><%= song['title'] %></li>
+    <% end %>
+</ul>
+
 <p>Find me in app/views/albums/show.html.erb</p>
