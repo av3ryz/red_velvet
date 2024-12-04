@@ -1,9 +1,9 @@
 <h1><%= @album['title'] %></h1>
-<h2>Songs in this Album:</h2>
+<h2>Songs</h2>
 <ul>
     <% @songs.each do |song| %>
         <li>
-            <%= link_to song['title'], songs_path(song['id']) %>
+            <%= link_to song['title'], song_path(song['id']) %>
         </li>
     <% end %>
 </ul>
