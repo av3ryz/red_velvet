@@ -1,5 +1,7 @@
 class AlbumsController < ApplicationController
   def index
+    albums_sql = "SELECT * FROM albums"
+    @albums = db.execute(albums_sql)
   end
 
   def show

@@ -1,2 +1,8 @@
-<h1>Songs#show</h1>
+<h1>Song: <%= @song['title'] %></h1>
+<h2>Artists Who Sing This Song</h2>
+<ul>
+    <% @artists.each do |artist| %>
+        <li><%= artist['name'] %></li>
+    <% end %>
+</ul>
 <p>Find me in app/views/songs/show.html.erb</p>

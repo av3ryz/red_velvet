@@ -8,5 +8,8 @@ class ArtistsController < ApplicationController
     artist_id = params[:id]
     sql = sanitize_sql(["SELECT * FROM artists WHERE id = ?", artist_id])
     @artist = db.execute(sql).first
+
+    albums_sql = sanitize_sql(["SELECT * FROM albums WHERE artist_id = ?", artist_id])
+    @albums = db.execute(albums_sql)
   end
 end

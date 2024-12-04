@@ -1,2 +1,10 @@
-<h1>Artists#show</h1>
+<h1><%= @artist['name'] %></h1>
+<h2>Albums</h2>
+<ul>
+    <% @albums.each do |album| %>
+        <li>
+            <%= link_to album['title'], album_path(album['id']) %>
+        </li>
+    <% end %>
+</ul>
 <p>Find me in app/views/artists/show.html.erb</p>
