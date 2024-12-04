@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :artists, only: [:index, :show]
-  resources :albums, only: [: index, :show]
+  resources :albums, only: [:index, :show]
   resources :songs, only: [:index, :show]
   root 'artists#index'
 
