@@ -2,7 +2,7 @@
 <h2>Artists</h2>
 <ul>
     <% @artists.each do |artist| %>
-        <li><%= artist['name'] %></li>
+        <li><%= link_to artist['name'], artist_path(artist['id']) %></li>
     <% end %>
 </ul>
 <p>Find me in app/views/songs/show.html.erb</p>
