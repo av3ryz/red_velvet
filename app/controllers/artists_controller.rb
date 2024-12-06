@@ -6,7 +6,7 @@ class ArtistsController < ApplicationController
 
   def show
     artist_id = params[:id]
-    sql = sanitize_sql(["SELECT * FROM artists WHERE id = ?", artist_id])
+    sql = sanitize_sql([ "SELECT * FROM artists WHERE id = ?", artist_id ])
     @artist = db.execute(sql).first
 
     albums_sql = sanitize_sql([
