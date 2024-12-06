@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class SongsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
@@ -7,7 +7,7 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    song = songs(:one) 
+    song = songs(:one)
     get song_path(song)
     assert_response :success
   end
