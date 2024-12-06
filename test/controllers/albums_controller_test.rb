@@ -7,7 +7,7 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    album = albums(:one) # Reference the fixture
+    album = albums(:one)
     get album_path(album)
     assert_response :success
   end

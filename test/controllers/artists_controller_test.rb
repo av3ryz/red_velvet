@@ -7,7 +7,7 @@ class ArtistsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    artist = artists(:one) # Reference the fixture
+    artist = artists(:one)
     get artist_path(artist)
     assert_response :success
   end
